@@ -1,0 +1,139 @@
+/* Electric blue on dark */
+:root{
+  --bg: #0e1117;
+  --panel: #141922;
+  --text: #e6edf3;
+  --muted: #9aa4b2;
+  --brand: #4f8cff;
+  --brand-acc: #8aa9ff;
+  --card-border: #2a3240;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ✅ Box model props */
+.container {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ✅ ID selector */
+#site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+}
+
+.section { margin-top: 48px; }  /* ✅ class used multiple times */
+
+.section-title {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  letter-spacing: 0.3px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: 2px solid var(--card-border);
+  object-fit: cover;
+}
+
+.brand-title { margin: 0; font-size: 28px; }
+.brand-tagline { margin: 2px 0 0 0; color: var(--muted); }
+
+.nav a {
+  margin-left: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+/* ✅ Requirement: hover style for <a> */
+.nav a:hover,
+a:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* ✅ Reusable card */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 18px;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-acc);
+}
+
+.project-title { margin: 0 0 6px 0; font-size: 18px; }
+.project-meta { margin: 0 0 10px 0; color: var(--muted); }
+
+.muted { color: var(--muted); }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: linear-gradient(180deg, var(--brand), var(--brand-acc));
+  color: #0b1020;
+  font-weight: 600;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.contact-card a { text-decoration: none; }
+
+.footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  border-top: 1px solid var(--card-border);
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .nav { display: none; }
+  .brand-title { font-size: 24px; }
+}
+
