@@ -1,139 +1,68 @@
-/* Electric blue on dark */
-:root{
-  --bg: #0e1117;
-  --panel: #141922;
-  --text: #e6edf3;
-  --muted: #9aa4b2;
-  --brand: #4f8cff;
-  --brand-acc: #8aa9ff;
-  --card-border: #2a3240;
+/* apply to at least one HTML tag */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f172a; /* dark navy */
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
 }
 
-* { box-sizing: border-box; }
-
-html, body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
+/* id selector */
+#hero {
+    background: linear-gradient(135deg, #1d4ed8, #0f172a);
+    padding: 3rem 1.5rem;
+    text-align: center;
 }
 
-/* ✅ Box model props */
-.container {
-  width: min(100%, 1040px);
-  margin: 0 auto;
-  padding: 24px;
+h1 {
+    margin-bottom: 0.5rem;
 }
 
-/* ✅ ID selector */
-#site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding-top: 32px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--card-border);
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(6px);
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
+.section {
+    padding: 2rem 1.5rem;
 }
 
-.section { margin-top: 48px; }  /* ✅ class used multiple times */
-
-.section-title {
-  margin: 0 0 16px 0;
-  font-size: 24px;
-  letter-spacing: 0.3px;
+/* example of box model changes: padding + margin + border + border-radius */
+.project-card {
+    background-color: #1f2937;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+/* class applied to image */
+.card-img {
+    display: block;
+    margin-top: 1rem;
+    max-width: 100%;
+    border-radius: 6px;
 }
 
-.avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  border: 2px solid var(--card-border);
-  object-fit: cover;
+/* link styling */
+a {
+    color: #93c5fd;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.brand-title { margin: 0; font-size: 28px; }
-.brand-tagline { margin: 2px 0 0 0; color: var(--muted); }
-
-.nav a {
-  margin-left: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--text);
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-  transition: border-color 120ms ease, color 120ms ease;
-}
-
-/* ✅ Requirement: hover style for <a> */
-.nav a:hover,
+/* hover color change (required) */
 a:hover {
-  color: var(--brand);
-  border-color: var(--brand);
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+/* button-ish link in hero */
+.btn-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.3rem;
+    background-color: #0f172a;
+    border-radius: 999px;
+    border: 1px solid #93c5fd;
 }
-
-/* ✅ Reusable card */
-.card {
-  background: var(--panel);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 18px;
-  transition: transform 120ms ease, border-color 120ms ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  border-color: var(--brand-acc);
-}
-
-.project-title { margin: 0 0 6px 0; font-size: 18px; }
-.project-meta { margin: 0 0 10px 0; color: var(--muted); }
-
-.muted { color: var(--muted); }
-
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--card-border);
-  background: linear-gradient(180deg, var(--brand), var(--brand-acc));
-  color: #0b1020;
-  font-weight: 600;
-  transition: opacity 120ms ease, transform 120ms ease;
-}
-
-.btn:hover { opacity: 0.9; transform: translateY(-1px); }
-
-.contact-card a { text-decoration: none; }
 
 .footer {
-  margin-top: 56px;
-  padding-top: 16px;
-  padding-bottom: 32px;
-  border-top: 1px solid var(--card-border);
-  color: var(--muted);
+    background-color: #020617;
+    text-align: center;
 }
-
-@media (max-width: 640px) {
-  .nav { display: none; }
-  .brand-title { font-size: 24px; }
-}
-

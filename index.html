@@ -1,88 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- ✅ Requirement: meta description -->
-  <meta name="description" content="Alex Tu Portfolio website — projects, experience, and interests in ECE, software engineering, and AI." />
-  <title>Alex Tu Portfolio website</title>
-  <link rel="stylesheet" href="stylesheet.css" />
+    <meta charset="UTF-8" />
+    <!-- required in HW5 -->
+    <meta name="description" content="Personal website for Alex Tu — UT Austin ECE, projects, and contact info." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Tu | Personal Site</title>
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>
-  <!-- ✅ Requirement: use an id and style it -->
-  <header id="site-header" class="container">
-    <div class="brand">
-      <!-- Placeholder image (you can replace later) -->
-      <img class="avatar" src="https://picsum.photos/seed/alex/128" alt="Placeholder headshot" />
-      <div>
-        <h1 class="brand-title">Alex Tu</h1>
-        <p class="brand-tagline">ECE @ UT Austin • SWE / Embedded • Building useful things</p>
-      </div>
+    <!-- header section with an id to style -->
+    <div id="hero">
+        <h1>Hello, I'm Alex 👋</h1>
+        <p>Senior ECE @ UT Austin | SWE / Embedded / Data</p>
+        <!-- link to another website -->
+        <a href="https://github.com/" target="_blank" class="btn-link">Visit my GitHub</a>
     </div>
 
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <!-- ✅ Requirement: external link -->
-      <a href="https://github.com/alextu862" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
-  </header>
-
-  <!-- ✅ Requirement: use <div>/<section> for 2+ sections -->
-  <main class="container">
-    <section id="about" class="section">
-      <h2 class="section-title">About</h2>
-      <div class="card">
+    <!-- about section -->
+    <div class="section">
+        <h2>About Me</h2>
         <p>
-          I’m Alex Tu, an ECE student at UT Austin focused on software engineering and embedded systems.
-          I enjoy building practical tools that improve operations and user experience.
+            I build AI agents for my family's business (TOT Nail Supply), custom POS
+            systems, and class projects for EE/ECE courses. I like React, Python, and
+            embedded stuff.
         </p>
-        <p class="muted">
-          Outside of class, I experiment with AI agents and workflow automation.
-        </p>
-      </div>
-    </section>
+        <!-- image requirement -->
+        <img src="https://via.placeholder.com/300x180.png?text=My+Project" alt="Project preview" class="card-img" />
+    </div>
 
-    <section id="projects" class="section">
-      <h2 class="section-title">Projects</h2>
-      <div class="cards">
-        <!-- ✅ Reused component: .card appears multiple times -->
-        <article class="card">
-          <h3 class="project-title">TOT Nails POS System</h3>
-          <p class="project-meta">Python • SQLite • Flask</p>
-          <p>Custom POS and inventory tracking; reduced transaction errors and increased throughput.</p>
-          <a class="btn" href="https://github.com/alextu862" target="_blank" rel="noopener">Repo ↗</a>
-        </article>
+    <!-- projects section, same class used again -->
+    <div class="section">
+        <h2>Highlighted Projects</h2>
 
-        <article class="card">
-          <h3 class="project-title">AI Sales Bot</h3>
-          <p class="project-meta">LLMs • Notion API • GCal</p>
-          <p>Automates email scanning, calendar sync, and status updates to accelerate sales ops.</p>
-          <a class="btn" href="https://github.com/alextu862" target="_blank" rel="noopener">Repo ↗</a>
-        </article>
+        <div class="project-card">
+            <h3>SIN7 POS Platform</h3>
+            <p>Reduced transaction errors by ~40% and saved 6 hrs/week.</p>
+        </div>
 
-        <article class="card">
-          <h3 class="project-title">Signals & DSP Mini-Project</h3>
-          <p class="project-meta">MATLAB • FIR Filters</p>
-          <p>Designed and analyzed FIR filters; documented methodology and results.</p>
-          <a class="btn" href="https://github.com/alextu862" target="_blank" rel="noopener">Repo ↗</a>
-        </article>
-      </div>
-    </section>
+        <div class="project-card">
+            <h3>Smart Inventory Dashboard</h3>
+            <p>Tracked SKUs and synced with Google services.</p>
+        </div>
+    </div>
 
-    <section id="contact" class="section">
-      <h2 class="section-title">Contact</h2>
-      <div class="card contact-card">
-        <p><strong>Email:</strong> <a href="mailto:alex@example.com">alex@example.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alextu" target="_blank" rel="noopener">linkedin.com/in/alextu</a></p>
-        <p><strong>Resume:</strong> <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume PDF ↗</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container footer">
-    <p>© <span id="year">2025</span> Alex Tu · Built with HTML & CSS</p>
-  </footer>
+    <!-- footer just to show another link -->
+    <footer class="section footer">
+        <p>Connect with me on <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
+        <p>&copy; 2025 Alex Tu</p>
+    </footer>
 </body>
 </html>
